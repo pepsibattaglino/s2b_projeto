@@ -13,7 +13,7 @@ public class LoginVerificationPoint {
 	}
 	
 	public void verificarMensagemDeSucesso() {
-		final String expectedMessage = "Olá, Fulano";
+		final String expectedMessage = "Fulano";
 		assertTrue(this.driver.getPageSource().contains(expectedMessage));
 	}
 	
