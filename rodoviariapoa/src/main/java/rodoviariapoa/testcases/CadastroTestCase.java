@@ -4,23 +4,19 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import rodoviariapoa.ressources.DriverSetUp;
 import rodoviariapoa.tasks.CadastroTask;
 import rodoviariapoa.validationpoints.CadastroVerificationPoint;
 
 public class CadastroTestCase {
-
 	private WebDriver driver;
 	private CadastroTask cadastroTask;
 	private CadastroVerificationPoint cadastroVerificationPoint;
 
 	@Before
 	public void setUp() { 
-		WebDriverManager.chromedriver().setup();
-		this.driver = new ChromeDriver();
-		this.driver.get("https://www.rodoviariaportoalegre.com.br");
+		this.driver = DriverSetUp.getDriverConfigForChrome("https://www.rodoviariaportoalegre.com.br/");
 		this.driver.manage().window().maximize();
 		this.cadastroTask = new CadastroTask(driver);
 		this.cadastroVerificationPoint = new CadastroVerificationPoint(driver);		

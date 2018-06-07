@@ -7,8 +7,11 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 import rodoviariapoa.testcases.BuscaTestCase;
+import rodoviariapoa.testcases.BuscaTestCaseWithFireFox;
 import rodoviariapoa.testcases.CadastroTestCase;
+import rodoviariapoa.testcases.CadastroTestCaseWithFireFox;
 import rodoviariapoa.testcases.LoginTestCase;
+import rodoviariapoa.testcases.LoginTestCaseWithFireFox;
 
 
 
@@ -16,7 +19,10 @@ import rodoviariapoa.testcases.LoginTestCase;
 @SuiteClasses({
 	CadastroTestCase.class,
 	LoginTestCase.class,
-	BuscaTestCase.class
+	BuscaTestCase.class,
+	CadastroTestCaseWithFireFox.class,
+	LoginTestCaseWithFireFox.class,
+	BuscaTestCaseWithFireFox.class
 })
 
 public class RegressionTestSuite {
