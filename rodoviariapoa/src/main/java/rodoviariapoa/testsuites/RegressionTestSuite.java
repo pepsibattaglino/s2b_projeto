@@ -6,13 +6,17 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
+import rodoviariapoa.testcases.BuscaTestCase;
 import rodoviariapoa.testcases.CadastroTestCase;
+import rodoviariapoa.testcases.LoginTestCase;
 
 
 
 @RunWith(Suite.class)
 @SuiteClasses({
-	CadastroTestCase.class
+	CadastroTestCase.class,
+	LoginTestCase.class,
+	BuscaTestCase.class
 })
 
 public class RegressionTestSuite {
