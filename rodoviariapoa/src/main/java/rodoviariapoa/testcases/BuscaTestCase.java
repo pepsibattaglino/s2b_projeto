@@ -26,15 +26,14 @@ public class BuscaTestCase {
 	}
 	
 	@Test
-	public void testMain() {
-		this.buscaTask.preencharFormularioDeBusca("Porto Alegre", "Rio de Janeiro", "12122018", "1412218");
+	public void testMain() throws InterruptedException {
+		this.buscaTask.preencharFormularioDeBusca("Porto Alegre", "Rio de Janeiro", "12/12/2018", "15/12/218");
 		this.buscaTask.enviarBusca();
 		this.buscaVerificationPoint.verificarMensagemDeSucesso();
 	}
 	
 	@After
-	public void tearDown() throws InterruptedException {
-		Thread.sleep(10000);
+	public void tearDown(){
 		this.driver.quit();
 	}
 }

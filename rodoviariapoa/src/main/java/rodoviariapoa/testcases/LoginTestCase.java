@@ -26,15 +26,16 @@ public class LoginTestCase {
 	}
 	
 	@Test
-	public void testMain() {
+	public void testMain() throws InterruptedException {
 		this.loginTask.abrirFormularioDeLogin();
 		this.loginTask.preencherFormularioDeLogin("j332357@nwytg.com", "1234567a");
 		this.loginTask.enviarLogin();
+		Thread.sleep(10000);
 		this.loginVerificationPoint.verificarMensagemDeSucesso();
 	}
 	
 	@After
-	public void tearDown() throws InterruptedException {
+	public void tearDown(){
 		this.driver.quit();
 	}
 }
